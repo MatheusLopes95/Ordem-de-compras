@@ -1,40 +1,40 @@
-function checkAuth() {
-  return true;
-}
+// function checkAuth() {
+//   return true;
+// }
 
-function logout() {
-  sessionStorage.removeItem('purchaseSystem_clients');
-  sessionStorage.removeItem('purchaseSystem_products');
-  sessionStorage.removeItem('purchaseSystem_orders');
+// function logout() {
+//   sessionStorage.removeItem('purchaseSystem_clients');
+//   sessionStorage.removeItem('purchaseSystem_products');
+//   sessionStorage.removeItem('purchaseSystem_orders');
   
-  window.location.href = 'index.html';
-}
+//   window.location.href = 'index.html';
+// }
 
-function addLogoutButton() {
-  const nav = document.querySelector('.nav');
+// function addLogoutButton() {
+//   const nav = document.querySelector('.nav');
   
-  if (!nav) return;
+//   if (!nav) return;
 
-  const existingLogout = nav.querySelector('.logout-btn');
-  if (existingLogout) return;
+//   const existingLogout = nav.querySelector('.logout-btn');
+//   if (existingLogout) return;
   
-  const logoutBtn = document.createElement('a');
-  logoutBtn.href = '#';
-  logoutBtn.className = 'nav-link logout-btn';
-  logoutBtn.innerHTML = 'Sair do sistema';
+//   const logoutBtn = document.createElement('a');
+//   logoutBtn.href = '#';
+//   logoutBtn.className = 'nav-link logout-btn';
+//   logoutBtn.innerHTML = 'Sair do sistema';
   
-  logoutBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (confirm('Deseja realmente sair do sistema?')) {
-      logout();
-    }
-  });
+//   logoutBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     if (confirm('Deseja realmente sair do sistema?')) {
+//       logout();
+//     }
+//   });
   
-  nav.appendChild(logoutBtn);
-}
+//   nav.appendChild(logoutBtn);
+// }
 
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(() => {
-    addLogoutButton();
-  }, 100);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   setTimeout(() => {
+//     addLogoutButton();
+//   }, 100);
+// });
