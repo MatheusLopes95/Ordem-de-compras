@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Ordem de compras</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h1>Ordem de compras</h1>
+        <p>Faça login para acessar o sistema</p>
+      </div>
+      
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Nome de usuário</label>
+          <input 
+            type="text" 
+            id="username" 
+            placeholder="Digite seu usuário"
+            opcional
+          />
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input 
+            type="password" 
+            id="password" 
+            placeholder="Digite sua senha"
+            opcional
+          />
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-login">
+          Entrar no sistema
+        </button>
+        
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/clients.js"></script>
+</body>
+</html>

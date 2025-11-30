@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Produtos - Ordem de Compras</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body data-page="products">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="app-title">Ordem de Compras</div>
+      <nav class="nav">
+        <a href="clients.html"  class="nav-link" data-page="clients">Clientes</a>
+        <a href="products.html" class="nav-link" data-page="products">Produtos</a>
+        <a href="orders.html"   class="nav-link" data-page="orders">Ordens de compra</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <h1>Cadastro de produtos</h1>
+
+      <div class="card">
+        <h2>Novo produto</h2>
+        <form id="productForm">
+          <label for="productName">Nome do produto</label>
+          <input type="text" id="productName" placeholder="Ex.: Mouse USB" required />
+
+          <label for="productPrice">Preço base</label>
+          <input type="number" id="productPrice" step="0.01" min="0" placeholder="Ex.: 99,90" required />
+
+          <label for="productDescription">Descrição (opcional)</label>
+          <textarea id="productDescription" placeholder="Detalhes do produto"></textarea>
+
+          <button type="submit" class="btn btn-primary">Salvar produto</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Produtos cadastrados</h2>
+        <div id="productsList" class="muted">
+          Nenhum produto cadastrado ainda.
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/products.js"></script>
+</body>
+</html>

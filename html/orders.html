@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ordens de compra - Ordem de Compras</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body data-page="orders">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="app-title">Ordem de Compras</div>
+      <nav class="nav">
+        <a href="clients.html"  class="nav-link" data-page="clients">Clientes</a>
+        <a href="products.html" class="nav-link" data-page="products">Produtos</a>
+        <a href="orders.html"   class="nav-link" data-page="orders">Ordens de compra</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <h1>Ordens de compra</h1>
+
+      <div class="layout">
+        <div class="card">
+          <h2>Nova ordem de compra</h2>
+
+          <div id="ordersWarning" class="muted" style="margin-bottom:8px; display:none;">
+            Cadastre pelo menos um cliente e um produto para criar ordens.
+          </div>
+
+          <form id="orderForm">
+            <label for="orderClientSelect">Cliente</label>
+            <select id="orderClientSelect"></select>
+
+             <label for="orderDate">Data</label>
+            <input type="date" id="orderDate" min="2010-01-01" max="2050-12-31"/>
+            
+            
+
+            <label for="orderStatus">Status</label>
+            <select id="orderStatus">
+              <option value="pendente">Pendente</option>
+              <option value="aprovada">Aprovada</option>
+              <option value="recebida">Recebida</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+
+            <div class="items-header">
+              <span>Itens da ordem</span>
+              <button type="button" class="btn btn-secondary btn-sm" id="addOrderItemBtn">
+                Adicionar item
+              </button>
+            </div>
+
+            <div class="items-grid" id="orderItemsContainer">
+              <div class="items-empty" id="orderItemsEmptyText">
+                Nenhum item adicionado ainda.
+              </div>
+              <div class="item-row-header">
+                <span>Produto</span>
+                <span>Qtd</span>
+                <span>Preço unitário</span>
+                <span></span>
+              </div>
+            </div>
+
+            <label for="orderNotes">Observações</label>
+            <textarea id="orderNotes" placeholder="Notas internas, condições especiais etc."></textarea>
+
+            <button type="submit" class="btn btn-primary">
+              Salvar ordem
+            </button>
+          </form>
+        </div>
+
+        <div class="card">
+          <div class="orders-header">
+            <h2>Ordens registradas</h2>
+            <select id="orderStatusFilter">
+              <option value="todas">Filtrar por status: todas</option>
+              <option value="pendente">Pendente</option>
+              <option value="aprovada">Aprovada</option>
+              <option value="recebida">Recebida</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+          </div>
+
+          <div id="ordersList" class="muted">
+            Nenhuma ordem cadastrada ainda.
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/orders.js"></script>
+</body>
+</html>

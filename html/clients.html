@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clientes - Ordem de Compras</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body data-page="sistemas">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="app-title">Sistema de Compras</div>
+      <nav class="nav">
+        <a href="sistemas.html"  class="nav-link" data-page="clients">Clientes</a>
+        <a href="products.html" class="nav-link" data-page="products">Produtos</a>
+        <a href="orders.html"   class="nav-link" data-page="orders">Ordens de compra</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <h1>Cadastro de clientes</h1>
+
+      <div class="card">
+        <h2>Novo cliente</h2>
+        <form id="clientForm">
+          <label for="clientName">Nome</label>
+          <input type="text" id="clientName" placeholder="Nome do cliente" maxlength="100" required />
+
+          <label for="clientCpf">CPF</label>
+          <input type="text" id="clientCpf" placeholder="000.000.000-00" maxlength="14" required />
+
+          <label for="clientEmail">Email (opcional)</label>
+          <input type="email" id="clientEmail" placeholder="cliente@exemplo.com" maxlength="100" />
+
+          <label for="clientPhone">Telefone (opcional)</label>
+          <input type="text" id="clientPhone" placeholder="(xx) xxxxx-xxxx" maxlength="15" />
+
+          <button type="submit" class="btn btn-primary">Salvar cliente</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Clientes cadastrados</h2>
+        <div id="clientsList" class="muted">
+          Nenhum cliente cadastrado ainda.
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../js/auth.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/clients.js"></script>
+</body>
+</html>
