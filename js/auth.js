@@ -7,7 +7,7 @@ function logout() {
   sessionStorage.removeItem('purchaseSystem_products');
   sessionStorage.removeItem('purchaseSystem_orders');
   
-  window.location.href = 'login.html';
+  window.location.href = 'index.html';
 }
 
 function addLogoutButton() {

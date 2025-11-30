@@ -39,7 +39,7 @@ function addManualLogoutButton() {
       sessionStorage.removeItem('purchaseSystem_clients');
       sessionStorage.removeItem('purchaseSystem_products');
       sessionStorage.removeItem('purchaseSystem_orders');
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';
     }
   });
 
