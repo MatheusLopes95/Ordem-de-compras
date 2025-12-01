@@ -54,7 +54,6 @@ function deleteProduct(id) {
 
   products = products.filter(p => String(p.id) !== String(id));
 
-  // remove itens de ordens com esse produto e, se ficar sem item, apaga a ordem
   orders = orders
     .map(order => ({
       ...order,
@@ -109,3 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
   setupProductForm();
   renderProducts();
 });
+

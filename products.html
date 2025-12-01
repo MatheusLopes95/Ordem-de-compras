@@ -26,7 +26,7 @@
           <input type="text" id="productName" placeholder="Ex.: Mouse USB" required />
 
           <label for="productPrice">Preço base</label>
-          <input type="number" id="productPrice" step="0.01" min="0" placeholder="Ex.: 99,90" required />
+          <input type="number" id="productPrice" step="0.01" min="0" maxlength="9" placeholder="Ex.: 99,90" required />
 
           <label for="productDescription">Descrição (opcional)</label>
           <textarea id="productDescription" placeholder="Detalhes do produto"></textarea>
@@ -45,6 +45,7 @@
   </div>
 
   <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/products.js"></script>
 </body>
